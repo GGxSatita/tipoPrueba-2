@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <form [formGroup]="formulario" (ngSubmit)="autenticar()">
+
+    <ion-row>
+      <ion-col >
+        <ion-item>
+          <ion-label position="stacked">Username</ion-label>
+          <ion-input formGroupName="username" type="text" placeholder="Username"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col >
+        <ion-item>
+          <ion-label position="stacked">Password</ion-label>
+          <ion-input formControlName="password" type="password" placeholder="Password"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col >
+        <ion-button type="submit" role="submit" expand="full">
+          Ingresar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    </form>
+
+    <ion-row>
+      <ion-col>
+        <ion-button
+          expand="full"
+          fill="clear"
+          shape="round"
+          [routerLink]="['/registro']"
+          color="danger"
+          >
+          Registrate
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
